@@ -11,7 +11,7 @@ def registration_user_api_view(request):
     serializer = serializers.UserRegistrationSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
     serializer.save()
-    return Response(data=serializer.data, status=201)
+    return Response(data=serializer.data, status=200)
 
 
 @api_view(['POST'])
